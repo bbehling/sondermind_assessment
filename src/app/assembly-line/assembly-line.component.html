@@ -1,0 +1,19 @@
+<span>Add an item</span> &nbsp;<input
+  (keyup)="onKeyUp($event)"
+  data-test="assembly-add-item"
+/>
+<div style="display: flex; justify-content: space-evenly;">
+  <div *ngFor="let stage of stageDataStruct">
+    <div>
+      {{ stage.name }}
+      <div *ngFor="let item of stage.items">
+        <button
+          (contextmenu)="onRightClick(item, $event)"
+          (click)="onLeftClick(item)"
+        >
+          {{ item.name }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

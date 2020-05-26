@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AssemblyLineComponent } from './assembly-line/assembly-line.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AssemblyLineComponent
   ],
   imports: [
     BrowserModule,
